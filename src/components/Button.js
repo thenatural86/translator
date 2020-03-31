@@ -1,4 +1,5 @@
 import React from "react"
+// import of language context object
 import LanguageContext from "../contexts/LanguageContext"
 import ColorContext from "../contexts/ColorContext"
 
