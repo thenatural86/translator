@@ -3,7 +3,9 @@ import React from "react"
 import LanguageContext from "../contexts/LanguageContext"
 import ColorContext from "../contexts/ColorContext"
 
+// Do not need a context type when using a Consumer
 class Button extends React.Component {
+  // helper method that compares the value of the language property
   renderSubmit = language => {
     return language === "english" ? "Submit" : "Voorleggen"
   }
@@ -11,7 +13,11 @@ class Button extends React.Component {
   renderButton = color => {
     return (
       <button className={`ui button ${color}`}>
+        {/* Call the Consumer component on the language context object  */}
         <LanguageContext.Consumer>
+          {/* provide one child passed into consumer, which is q function. */}
+          {/* gets called with the current value inside of context object */}
+          {/* invokes the renderSubmit callback function */}
           {({ language }) => this.renderSubmit(language)}
         </LanguageContext.Consumer>
       </button>
