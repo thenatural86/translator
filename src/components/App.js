@@ -11,6 +11,7 @@ class App extends React.Component {
         <LanguageStore>
           <LanguageSelector />
 
+          {/* value prop is special for Provider. The value is what we want to take from App component and put into context object */}
           <ColorContext.Provider value="red">
             <UserCreate />
           </ColorContext.Provider>
