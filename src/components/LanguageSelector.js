@@ -8,7 +8,6 @@ class LanguageSelector extends React.Component {
 
   render() {
     // console.log(this.context)
-    //
     return (
       <div>
         Select a language

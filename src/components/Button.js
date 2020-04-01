@@ -1,6 +1,7 @@
 import React from "react"
 // import of language context object
 import LanguageContext from "../contexts/LanguageContext"
+// color context object
 import ColorContext from "../contexts/ColorContext"
 
 // Do not need a context type when using a Consumer
@@ -26,6 +27,8 @@ class Button extends React.Component {
 
   render() {
     // console.log(this.context)
+    // access the value of the color context object via .Consumer
+    // function passed in that returns renderButton helper method
     return (
       <ColorContext.Consumer>
         {color => this.renderButton(color)}

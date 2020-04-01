@@ -4,11 +4,11 @@ import React from "react"
 // can use any type of valid JS value: object, array, string, ect.
 const Context = React.createContext("english")
 
+// contains all business logic related to currently selected language as well as a Provider to share that data with its children. Single source of truth.
 export class LanguageStore extends React.Component {
   state = { language: "english" }
 
-  // callback to change language
-  // language passed in as arg, set state with that new language value
+  // onLanguageChange callback function goes inside of the context object and is available to language selector to change the language
   onLanguageChange = language => {
     this.setState({ language })
   }
