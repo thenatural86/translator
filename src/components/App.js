@@ -9,6 +9,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="ui container">
+        {/* All components wrapped in language store to give them access to LanguageStore context object and methods */}
         <LanguageStore>
           {/* language selector component that renders the flags and their functionality */}
           <LanguageSelector />
